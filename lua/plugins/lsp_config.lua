@@ -68,7 +68,7 @@ return {
         },
       })
 
-      -- LSP hover config
+      -- LSP hover confi)
       vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
         border = "rounded",
       })
@@ -103,6 +103,7 @@ return {
         vim.keymap.set("n", "[d", vim.diagnostic.goto_prev, opts)
         vim.keymap.set("n", "]d", vim.diagnostic.goto_next, opts)
         vim.keymap.set("n", "<leader>q", vim.diagnostic.setloclist, opts)
+        
         
         -- Workspace folders
         vim.keymap.set("n", "<leader>wa", vim.lsp.buf.add_workspace_folder, opts)
@@ -182,6 +183,7 @@ return {
         ),
         single_file_support = true,
       })
+
 
       -- CMake LSP (optional)
       lspconfig.cmake.setup({

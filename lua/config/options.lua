@@ -17,3 +17,4 @@ vim.opt.splitright = true          -- Put new windows right of current
 vim.opt.tabstop = 4               -- Number of spaces tabs count for
 vim.opt.termguicolors = true       -- True color support
 vim.opt.wrap = false               -- Disable line wrap
+vim.opt.guicursor = "a:block"
