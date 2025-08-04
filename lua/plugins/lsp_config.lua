@@ -90,8 +90,8 @@ return {
         
         -- Documentation
         vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
-        vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
-        vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
+        -- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
+        -- vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
         
         -- Code actions
         vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
