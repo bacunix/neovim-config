@@ -39,7 +39,13 @@ return {
 
       -- LSP capabilities với cmp
       local capabilities = cmp_nvim_lsp.default_capabilities()
-      capabilities.textDocument.completion.completionItem.snippetSupport = true
+        capabilities = {
+            textDocument = {
+                semanticTokens = {
+                    multilineTokenSupport = true,
+                }
+            }
+        }
 
       -- Diagnostic config với signs - sử dụng vim.diagnostic.config thay vì vim.fn.sign_define
       vim.diagnostic.config({
@@ -68,8 +74,12 @@ return {
         },
       })
 
-      -- LSP hover confi)
-      vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+      -- LSP hover config
+      -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
+      --   border = "rounded",
+      -- })
+
+      vim.lsp.handlers["textDocument/define"] = vim.lsp.with(vim.lsp.handlers.define, {
         border = "rounded",
       })
 
@@ -89,7 +99,7 @@ return {
         vim.keymap.set("n", "gr", vim.lsp.buf.references, opts)
         
         -- Documentation
-        vim.keymap.set("n", "K", vim.lsp.buf.hover, opts)
+        vim.keymap.set("n", "gk", vim.lsp.buf.hover, opts)
         -- vim.keymap.set("n", "<C-k>", vim.lsp.buf.signature_help, opts)
         -- vim.keymap.set("i", "<C-k>", vim.lsp.buf.signature_help, opts)
         
@@ -172,6 +182,7 @@ return {
           clangdFileStatus = true,
         },
         filetypes = { "c", "cpp", "h", "hpp", "objc", "objcpp", "cuda", "proto" },
+        root_markers = {'.clangd', 'compile_flags.txt', 'compile_commands.json'},
         root_dir = lspconfig.util.root_pattern(
           '.clangd',
           '.clang-tidy',
@@ -223,6 +234,12 @@ return {
           completion = cmp.config.window.bordered(),
           documentation = cmp.config.window.bordered(),
         },
+
+        -- auto display documentation when move in completion
+        experimental = {
+
+        },
+
         mapping = cmp.mapping.preset.insert({
           ["<C-b>"] = cmp.mapping.scroll_docs(-4),
           ["<C-f>"] = cmp.mapping.scroll_docs(4),
