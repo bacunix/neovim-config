@@ -44,7 +44,7 @@ return {
         }
         })
 
-        vim.keymap.set("n", "<leader>e", ":Neotree<CR>", {silent = true});
+        vim.keymap.set("n", "<leader>e", ":Neotree toggle<CR>", {silent = true});
     end
   }
 }
