@@ -87,7 +87,7 @@ return {
     return {
       options = {
         theme = theme,  -- Dùng theme đã chỉnh sửa
-        globalstatus = true,
+        globalstatus = false,
         disabled_filetypes = { statusline = { "dashboard", "alpha", "starter" } },
       },
       sections = {
@@ -107,7 +107,6 @@ return {
           },
         },
         lualine_x = {
-          "encoding",
           {
             "diff",
             symbols = {

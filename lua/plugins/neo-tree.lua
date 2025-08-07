@@ -13,7 +13,7 @@ return {
         require("neo-tree").setup({
             source_selector = {
                     winbar = true,
-                    statusline = true
+                    statusline = false,
             },
             default_component_configs = {
                 git_status = {

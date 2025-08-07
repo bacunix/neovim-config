@@ -24,6 +24,6 @@ vim.opt.guicursor = "a:block"
 -- vim.cmd("set timeoutlen=300")
 -- vim.cmd("set ttimeoutlen=50")
 -- vim.opt.updatetime = 100 
-vim.opt.lazyredraw = true
+vim.opt.lazyredraw = false
 
 vim.cmd("set ttyfast")
