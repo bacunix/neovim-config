@@ -4,7 +4,7 @@ vim.opt.confirm = true             -- Confirm to save changes before exiting mod
 vim.opt.cursorline = false          -- Enable highlighting of the current line
 vim.opt.expandtab = true           -- Use spaces instead of tabs
 vim.opt.ignorecase = true          -- Ignore case
-vim.opt.list = true                -- Show some invisible characters (tabs...
+-- vim.opt.list = true                -- Show some invisible characters (tabs...
 vim.opt.mouse = "a"                -- Enable mouse mode
 vim.opt.number = true              -- Print line number
 vim.opt.relativenumber = true      -- Relative line numbers
@@ -18,12 +18,15 @@ vim.opt.tabstop = 4               -- Number of spaces tabs count for
 vim.opt.termguicolors = true       -- True color support
 vim.opt.wrap = false               -- Disable line wrap
 vim.opt.guicursor = "a:block"
-
+vim.opt.swapfile = false
+vim.opt.backup = false
+vim.opt.writebackup = false
+vim.opt.shell = "nu.exe"
 -- vim.opt.guifont="Fira Code Nerd Font:11"
+vim.g.netrw_liststyle = 3 -- Sets the default to tree view
 
 -- vim.cmd("set timeoutlen=300")
 -- vim.cmd("set ttimeoutlen=50")
 -- vim.opt.updatetime = 100 
-vim.opt.lazyredraw = false
 
 vim.cmd("set ttyfast")

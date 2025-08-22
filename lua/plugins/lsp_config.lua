@@ -4,7 +4,7 @@ return {
     "williamboman/mason.nvim",
     opts = {
       ui = {
-        border = "rounded",
+        border = "square",
         icons = {
           package_installed = "✓",
           package_pending = "➜",
@@ -67,7 +67,7 @@ return {
         float = {
           focusable = false,
           style = "minimal",
-          border = "rounded",
+          border = "square",
           source = "always",
           header = "",
           prefix = "",
@@ -76,15 +76,15 @@ return {
 
       -- LSP hover config
       -- vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, {
-      --   border = "rounded",
+      --   border = "square",
       -- })
 
       vim.lsp.handlers["textDocument/define"] = vim.lsp.with(vim.lsp.handlers.define, {
-        border = "rounded",
+        border = "square",
       })
 
       vim.lsp.handlers["textDocument/signatureHelp"] = vim.lsp.with(vim.lsp.handlers.signature_help, {
-        border = "rounded",
+        border = "square",
       })
 
       -- Keymaps function
