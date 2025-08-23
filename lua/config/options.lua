@@ -1,4 +1,4 @@
-
+vim.cmd("syntax on")
 vim.opt.clipboard = "unnamedplus"  -- Sync with system clipboard
 vim.opt.confirm = true             -- Confirm to save changes before exiting modified buffer
 vim.opt.cursorline = false          -- Enable highlighting of the current line
@@ -17,16 +17,17 @@ vim.opt.splitright = true          -- Put new windows right of current
 vim.opt.tabstop = 4               -- Number of spaces tabs count for
 vim.opt.termguicolors = true       -- True color support
 vim.opt.wrap = false               -- Disable line wrap
-vim.opt.guicursor = "a:block"
+-- vim.opt.guicursor = "a:block"
 vim.opt.swapfile = false
 vim.opt.backup = false
 vim.opt.writebackup = false
-vim.opt.shell = "nu.exe"
+-- vim.opt.shell = "nu"
 -- vim.opt.guifont="Fira Code Nerd Font:11"
-vim.g.netrw_liststyle = 3 -- Sets the default to tree view
+-- Mapping để refresh view
+vim.api.nvim_set_keymap('n', '<leader>r', ':e!<CR>', {noremap = true, silent = true})
 
 -- vim.cmd("set timeoutlen=300")
 -- vim.cmd("set ttimeoutlen=50")
 -- vim.opt.updatetime = 100 
 
-vim.cmd("set ttyfast")
+-- vim.cmd("set ttyfast")

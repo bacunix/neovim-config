@@ -12,13 +12,14 @@ map("n", "<C-j>", "<C-w>j", { desc = "Go to lower window" })
 map("n", "<C-k>", "<C-w>k", { desc = "Go to upper window" })
 map("n", "<C-l>", "<C-w>l", { desc = "Go to right window" })
 
+-- reload 
+vim.api.nvim_set_keymap('n', '<leader>r', ':e!<CR>', {noremap = true, silent = true})
+
 -- toggle list chars
 vim.keymap.set('n', '<leader>l', function()
   vim.opt.list = not vim.opt.list:get()
 end, {desc = "Toggle list chars"})
 
--- file manager
-map("n", "<leader>e", ":Ex<CR>", { desc = "Open file manager"})
 
 -- Resize window using <ctrl> arrow keys
 map("n", "<C-Up>", "<cmd>resize +2<cr>", { desc = "Increase window height" })
